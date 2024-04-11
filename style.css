@@ -37,6 +37,7 @@ nav a img{
     flex: 1;
     text-align: right;
     transition: 0.5s;
+    display: block;
 }
 
 .nav-right li{
@@ -336,6 +337,7 @@ header:hover{
         top: 0;
         right: -200px;
         text-align: right;
+        display: none;
         z-index: 2;
     }
     .dropbtn{
