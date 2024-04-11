@@ -1,18 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Contact Aqualood</title>
     <meta charset="utf-8">
-    <link rel="icon" href="images/Icon.png" type="icon">
+    <link rel="icon" href="images/Icon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    <div class="animationBackground">
+        <div class="container">
+            <div class="curvedLine"><div class="circleHole2"><div class="squareCover"></div></div></div>
+            <div class="circle1"><div class="circleHole"></div></div>
+            <div class="circle2"><div class="circleHole"></div></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            <p class="Aqua"> AQUA</p>
+        </div>
+    </div>
     <header>
         <nav>
-            <a href="index.html"><img src="images/LogoWhite.png"></a>
+            <a href="index.html"><img src="images/LogoWhite.png" alt="Aqualood logo"></a>
             <ul class="nav-right">
-                <div class="closeMenu" onclick="hideMenu()"><img src="images/MenuIcon.png" alt="Menu close icon"></div>
+                <li><div class="closeMenu" onclick="hideMenu()"><img src="images/MenuIcon.png" alt="Menu close icon"></div></li>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -20,9 +31,8 @@
                 <li class="dropdown">
                     <p>GAMES</p>
                     <div class="dropdown-content">
-                        <a href="tag.html">TAG</a>
-                        <a href="apoc.html">APOCALYPSE REWIND</a>
-                        <a href="holey.html">HOLEY CASTLE 2</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.Aqualood.TAG&hl=en&gl=US">TAG</a>
+                        <a href="https://alexturculet.itch.io/apocalypse-rewind">APOCALYPSE REWIND</a>
                     </div>
                 </li>
             </ul>
@@ -36,10 +46,12 @@
     </header>
     <main>
         <section class="desc">
-            <p>For any inquiries, please contact us at <a href="mailto:aqualood@gmail.com"> aqualood@gmail.com</a> or fill in the form below:</p>
+            <p>For any inquiries, please contact us at <a href="mailto:aqualood@gmail.com">aqualood@gmail.com</a>.</p>
+            <p>Stay up to date with our work by following our <a href="https://twitter.com/aqualood">Twitter acount</a> and our <a href="https://www.instagram.com/aqualood/">Instagram account</a>.</p>
+            <p>Check out the high quality videos on our <a href="https://www.youtube.com/channel/UCLutmfxG3yLYkZVwdt_eXpg?view_as=subscriber"> Youtube channel</a>.</p>
+            <p>Join our <a href="https://discord.gg/7SkscSQ">Discord server</a> to talk to us.</p>
         </section>
-
-
+        
     </main>
     <footer>
         <p>©2020 Aqualood™</p>
@@ -75,6 +87,15 @@
         x.addEventListener("change", function() {
             myFunction(x);
         });
+
+        var animation = document.getElementsByClassName("animationBackground")[0];
+
+        async function test() {
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            animation.style.display = "none";
+        }
+
+        test();
     </script>
 </body>
 </html>
