@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Other Aqualood</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/Icon.png" type="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/LogoWhite.png"></a>
+            <ul class="nav-right">
+                <div class="closeMenu" onclick="hideMenu()"><img src="images/MenuIcon.png" alt="Menu close icon"></div>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="other.html">OTHER</a></li>
+                <li class="dropdown">
+                    <p>GAMES</p>
+                    <div class="dropdown-content">
+                        <a href="tag.html">TAG</a>
+                        <a href="apoc.html">APOCALYPSE REWIND</a>
+                        <a href="holey.html">HOLEY CASTLE 2</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="openMenu" onclick="showMenu()"><img src="images/MenuIcon.png" alt="Menu open icon"></div>
+        </nav>
+        <div class="text-box">
+            <h1>Aqualood</h1>
+            <p>One of the most innovative game development companies out there, who strives to bring quality products to its users.</p>
+            <a href="https://play.google.com/store/apps/dev?id=8812663740667647994&hl=en&gl=US">Play store</a>
+        </div>
+    </header>
+    <main>
+        <section class="desc">
+            <p>The amazing Aqualood team also has a multitude of other projects they worked on, which are not officially affiliated with the Aqualood brand. You can find and test a few of them below.</p>
+        </section>
+
+        <section class="game">
+            <h1>Holey Castle</h1>
+            <iframe frameborder="0" src="https://itch.io/embed-upload/2016534?color=333333" allowfullscreen="true" width="600" height="338" autoplay="false"><a href="https://alexturculet.itch.io/holeycastle">Play Holey Castle on itch.io</a></iframe>
+            <p>This is a 2D game made in Unity in the span of 4 days by Turcu Filip and Turculeț Alex as an entry to the Brackeys 2020.1 game jam, which had the theme: Holes. In the game you dig holes as a way to defend your castle from the enemies. It turned out to be very fun, which prompted us to begin developing a sequal.</p>
+        </section>
+
+        <section class="game">
+            <h1>Lost in the mine</h1>
+            <iframe frameborder="0" src="https://itch.io/embed-upload/2158565?color=333333" allowfullscreen="true" width="600" height="338" autoplay="false"><a href="https://alexturculet.itch.io/lost-in-the-mine">Play Lost in the Mine on itch.io</a></iframe>
+            <p>This is a 2D game made in Unity in the span of 3 days by Turcu Filip and Turculeț Alex as an entry to the Ludum Dare 46 game jam, which had the theme: Keep it alive. In the game you play as Steve from Minecraft who tries to rescue his dog after it went into a cave to follow a chicken.</p>
+        </section>
+
+        <section class="game">
+            <h1>The Triangle</h1>
+            <iframe frameborder="0" src="https://itch.io/embed-upload/1994693?color=333333" allowfullscreen="true" width="600" height="338"><a href="https://alexturculet.itch.io/thetriangle">Play The Triangle on itch.io</a></iframe>
+            <p>This is a 2D game made in Unity by Turcu Filip and Turculeț Alex. This project is inspired by a physical game we used to play in 5th grade, which is what started our game development adventure, but after this decent version of it, we realised the game is a lot more fun when you're bored in class.</p>
+        </section>
+    </main>
+    <footer>
+        <p>©2020 Aqualood™</p>
+    </footer>
+    <script>
+        var nav = document.getElementsByClassName("nav-right")[0];
+
+        function showMenu() {
+            nav.style.display = "block";
+            nav.style.right = "0px";
+        }
+
+        function hideMenu() {
+            nav.style.display = "none";
+            nav.style.right = "-200px";
+        }
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                hideMenu();
+            } else {
+                showMenu();
+            }
+        }
+
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(max-width: 1000px)")
+
+        // Call listener function at run time
+        myFunction(x);
+
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+            myFunction(x);
+        });
+    </script>
+</body>
+</html>

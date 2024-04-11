@@ -73,7 +73,6 @@
         var nav = document.getElementsByClassName("nav-right")[0];
 
         function showMenu() {
-            console.log("Showing mneu");
             nav.style.display = "block";
             nav.style.right = "0px";
         }
@@ -82,6 +81,25 @@
             nav.style.display = "none";
             nav.style.right = "-200px";
         }
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                hideMenu();
+            } else {
+                showMenu();
+            }
+        }
+
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(max-width: 1000px)")
+
+        // Call listener function at run time
+        myFunction(x);
+
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+            myFunction(x);
+        });
     </script>
 </body>
 </html>

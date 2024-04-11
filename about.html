@@ -3,7 +3,6 @@
 <head>
     <title>About Aqualood</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/Icon.png" type="icon">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -49,20 +48,39 @@
             <p>Aqualood was created in early 2020 as a way for a group of 9th graders to challenge themselves during the pandemic. We have always been passionate about games and our lead developer has been developing games since he was in 6th grade. After coming up with the name and logo for Aqualood, we did a basic division of labor and got to work on our first game, TAG: The Adventurous Goat. Our lack of experience with a project of this scope said its word, as TAG was in development for around 16 months and lacked the polish you would expect in a modern game. After TAG, we took a break before deciding to start working on a sequal to a fun game a few of our members worked on during a game jam, thus creating Holey Castle 2. Unfortunately, due to school we have not been able to finish this project.</p>
         </section>
         <div class="images">
-            <h1>Products</h1>
-            <p>These are the 3 games Aqualood has officially worked on. The former 2 are finished and can be played, while the last one exists only as a test build and development is currently suspended for an undetermined period of time.</p>
+            <h1>Meet the team!</h1>
             <section>
                 <figure>
-                    <img src="images/goat2.png" alt="A picture of our magnific goat">
-                    <figcaption>TAG: The Adventurous Goat</figcaption>
+                    <img src="images/alex.png" alt="A picture of our magnific developer">
+                    <figcaption>Alex Turculeț: Lead Developer<br>Handles all of the programming and importing of assets.</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/ApocalypseRewindThumbnaiInstagraml.png" alt="Another picture of our magnific zombie">
-                    <figcaption>Apocalypse Rewind</figcaption>
+                    <img src="images/filip.png" alt="Another picture of our magnific 3d artist">
+                    <figcaption>Filip Turcu: Lead graphics designer<br>Made the majority of the models and all of the animations.</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/HoleyCastle.png" alt="Another picture of our magnific castle">
-                    <figcaption>Holey Castle 2</figcaption>
+                    <img src="images/glaf.png" alt="A picture of our magnific manager">
+                    <figcaption>Glafkos Michaelides: Project manager<br>Made the map and directed the development of the game.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/andrei.png" alt="A picture of our magnific video producer">
+                    <figcaption>Andrei Avram: Video producer<br>Our beautiful voice. Handles the recording and editing parts.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/vladutz.png" alt="A picture of our magnific junior graphic designer">
+                    <figcaption>Vlad Ștefan: Secondary graphic designer<br>Made some of the most common models.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/alexia.jfif" alt="A picture of our magnific marketing manager">
+                    <figcaption>Alexia Pătrașcu: Adveriting and marketing manager<br>Handled the marketing aspect.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/geo.png" alt="A picture of our magnific secondary developer">
+                    <figcaption>George Borozan: Secondary developer<br>Assisted in the making of some assets.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/gabi.jfif" alt="A picture of our magnific ex-community manager">
+                    <figcaption>Gabriel Turcuman: Ex-Community manager<br>Came up with the name of our company.</figcaption>
                 </figure>
             </section>
         </div>
@@ -74,13 +92,33 @@
         var nav = document.getElementsByClassName("nav-right")[0];
 
         function showMenu() {
-            console.log("Showing mneu");
+            nav.style.display = "block";
             nav.style.right = "0px";
         }
 
         function hideMenu() {
+            nav.style.display = "none";
             nav.style.right = "-200px";
         }
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                hideMenu();
+            } else {
+                showMenu();
+            }
+        }
+
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(max-width: 1000px)")
+
+        // Call listener function at run time
+        myFunction(x);
+
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+            myFunction(x);
+        });
     </script>
 </body>
 </html>

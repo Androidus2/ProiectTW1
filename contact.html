@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Aqualood</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="images/Icon.png" type="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,800;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="images/LogoWhite.png"></a>
+            <ul class="nav-right">
+                <div class="closeMenu" onclick="hideMenu()"><img src="images/MenuIcon.png" alt="Menu close icon"></div>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="other.html">OTHER</a></li>
+                <li class="dropdown">
+                    <p>GAMES</p>
+                    <div class="dropdown-content">
+                        <a href="tag.html">TAG</a>
+                        <a href="apoc.html">APOCALYPSE REWIND</a>
+                        <a href="holey.html">HOLEY CASTLE 2</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="openMenu" onclick="showMenu()"><img src="images/MenuIcon.png" alt="Menu open icon"></div>
+        </nav>
+        <div class="text-box">
+            <h1>Aqualood</h1>
+            <p>One of the most innovative game development companies out there, who strives to bring quality products to its users.</p>
+            <a href="https://play.google.com/store/apps/dev?id=8812663740667647994&hl=en&gl=US">Play store</a>
+        </div>
+    </header>
+    <main>
+        <section class="desc">
+            <p>For any inquiries, please contact us at <a href="mailto:aqualood@gmail.com"> aqualood@gmail.com</a> or fill in the form below:</p>
+        </section>
+
+
+    </main>
+    <footer>
+        <p>©2020 Aqualood™</p>
+    </footer>
+    <script>
+        var nav = document.getElementsByClassName("nav-right")[0];
+
+        function showMenu() {
+            nav.style.display = "block";
+            nav.style.right = "0px";
+        }
+
+        function hideMenu() {
+            nav.style.display = "none";
+            nav.style.right = "-200px";
+        }
+
+        function myFunction(x) {
+            if (x.matches) { // If media query matches
+                hideMenu();
+            } else {
+                showMenu();
+            }
+        }
+
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(max-width: 1000px)")
+
+        // Call listener function at run time
+        myFunction(x);
+
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+            myFunction(x);
+        });
+    </script>
+</body>
+</html>
